@@ -83,61 +83,85 @@ const Projects = () => {
   }, []);
 
   const projects = [
-    {
-      title: "Age Calculator",
-      description: "A practical tool that computes age using JavaScript's Date API with a clean, interactive UI.",
-      technologies: ["JavaScript", "HTML5", "CSS3", "Date API"],
-      type: "Mini Project",
-      highlights: ["Real-time calculations", "Clean UI", "Lightweight"],
-      codeLink: "https://github.com/Sharmila-Rajendran/Age-Calculator-Using-html-css-javascript.git",
-      demoLink: "https://sharmila-rajendran.github.io/Age-Calculator-Using-html-css-javascript/"
-    },
-    {
-      title: "Fluffopia - Pet's Care Website",
-      description: "A responsive e-commerce website for pet care products with cart, filtering, and dark mode.",
-      technologies: ["HTML5", "CSS3", "JavaScript (ES6)", "Bootstrap"],
-      type: "Mini Project",
-      highlights: ["Dynamic cart", "Category filtering", "Dark mode", "Checkout page"],
-      codeLink: "https://github.com/Sharmila-Rajendran/Fluffopia-Pet-s-Care-Website.git",
-      demoLink: "https://sharmila-rajendran.github.io/Fluffopia-Pet-s-Care-Website/"
-    },
-    {
-      title: "Stopwatch",
-      description: "A functional stopwatch using JavaScript timing functions with start, stop, and reset.",
-      technologies: ["JavaScript", "HTML5", "CSS3"],
-      type: "Mini Project",
-      highlights: ["Accurate timing", "Multiple controls", "Minimalist UI"],
-      codeLink: "https://github.com/Sharmila-Rajendran/Stop-Watch",
-      demoLink: "https://sharmila-rajendran.github.io/Stop-Watch/"
-    },
-    {
-      title: "Portfolio",
-      description: "A dynamic portfolio showcasing animations and interactive UI. Coming Soon!",
-      technologies: ["React.js", "CSS3", "Lucide Icons"],
-      type: "Coming Soon",
-      highlights: ["Modern UI", "Animations", "Responsive Design"],
-      codeLink: null,
-      demoLink: null
-    },
-    {
-      title: "Chat Application",
-      description: "A client-server chat app where multiple clients can chat via socket communication over a network.",
-      technologies: ["Core Java", "Socket Programming", "Networking", "Exception Handling"],
-      type: "Coming Soon",
-      highlights: ["Multi-client chat", "Socket-based communication", "Network-ready"],
-      codeLink: null,
-      demoLink: null
-    },
-    {
-      title: "Job Portal",
-      description: "A web platform for job seekers and recruiters with listings, applications, and basic authentication.",
-      technologies: ["React.js", "Node.js", "MySQL", "REST APIs"],
-      type: "Coming Soon",
-      highlights: ["Job listings", "Apply & manage jobs", "Simple authentication"],
-      codeLink: null,
-      demoLink: null
-    }
-  ];
+  {
+    title: "Portfolio",
+    description:
+      "A responsive and interactive portfolio built with React.js, showcasing my skills, projects, and contact information with animated particle effects.",
+    technologies: ["React.js", "JavaScript (ES6+)", "HTML5", "CSS3"],
+    type: "Main Project",
+    highlights: [
+      "Dynamic sections (Home, About, Skills, Projects, Contact)",
+      "Particle and neon animations",
+      "Fully responsive design"
+    ],
+    codeLink: "https://github.com/Sharmila-Rajendran/Personal-Portfolio---React.js.git",
+    demoLink: "https://sharmila-rajendran.github.io/Personal-Portfolio---React.js/"
+  },
+  {
+    title: "Fluffopia",
+    description:
+      "A responsive e-commerce website for pet care products with cart, filtering, and dark mode.",
+    technologies: ["HTML5", "CSS3", "JavaScript (ES6)", "Bootstrap"],
+    type: "Mini Project",
+    highlights: [
+      "Dynamic cart",
+      "Category filtering",
+      "Dark mode",
+      "Checkout page"
+    ],
+    codeLink:
+      "https://github.com/Sharmila-Rajendran/Fluffopia-Pet-s-Care-Website.git",
+    demoLink:
+      "https://sharmila-rajendran.github.io/Fluffopia-Pet-s-Care-Website/"
+  },
+  {
+    title: "Age Calculator",
+    description:
+      "A practical tool that computes age using JavaScript's Date API with a clean, interactive UI.",
+    technologies: ["JavaScript", "HTML5", "CSS3", "Date API"],
+    type: "Mini Project",
+    highlights: ["Real-time calculations", "Clean UI", "Lightweight"],
+    codeLink:
+      "https://github.com/Sharmila-Rajendran/Age-Calculator-Using-html-css-javascript.git",
+    demoLink:
+      "https://sharmila-rajendran.github.io/Age-Calculator-Using-html-css-javascript/"
+  },
+  {
+    title: "Stopwatch",
+    description:
+      "A functional stopwatch using JavaScript timing functions with start, stop, and reset.",
+    technologies: ["JavaScript", "HTML5", "CSS3"],
+    type: "Mini Project",
+    highlights: ["Accurate timing", "Multiple controls", "Minimalist UI"],
+    codeLink: "https://github.com/Sharmila-Rajendran/Stop-Watch",
+    demoLink: "https://sharmila-rajendran.github.io/Stop-Watch/"
+  },
+  {
+    title: "Chat Application",
+    description:
+      "A client-server chat app where multiple clients can chat via socket communication over a network.",
+    technologies: [
+      "Core Java",
+      "Socket Programming",
+      "Networking",
+      "Exception Handling"
+    ],
+    type: "Coming Soon",
+    highlights: ["Multi-client chat", "Socket-based communication", "Network-ready"],
+    codeLink: null,
+    demoLink: null
+  },
+  {
+    title: "Job Portal",
+    description:
+      "A web platform for job seekers and recruiters with listings, applications, and basic authentication.",
+    technologies: ["React.js", "Node.js", "MySQL", "REST APIs"],
+    type: "Coming Soon",
+    highlights: ["Job listings", "Apply & manage jobs", "Simple authentication"],
+    codeLink: null,
+    demoLink: null
+  }
+];
 
   return (
     <section id="projects" className="projects-section">
