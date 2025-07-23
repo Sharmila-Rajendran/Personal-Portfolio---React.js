@@ -1,0 +1,212 @@
+/* About Section - Matches Hero Style */
+.about-section {
+  position: relative;
+  z-index: 1;
+  padding: 5rem 1rem;
+  color: #f3f3f3;
+  overflow: hidden;
+  background: radial-gradient(circle at center, #0a0f1f 0%, #1e1b4b 100%);
+}
+
+/* Background Particles */
+.about-particle-canvas {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0.4;
+}
+
+/* Container */
+.container {
+  position: relative;
+  max-width: 1100px;
+  margin: 0 auto;
+  z-index: 2;
+}
+
+/* Section Header */
+.section-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  background: linear-gradient(to right, #7c3aed, #3b82f6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  text-shadow: 0 0 20px rgba(124,58,237,0.6), 0 0 40px rgba(59,130,246,0.5);
+  animation: shimmer 5s ease-in-out infinite alternate;
+}
+
+@keyframes shimmer {
+  0%, 100% {
+    text-shadow: 0 0 20px rgba(124,58,237,0.6), 0 0 40px rgba(59,130,246,0.5);
+  }
+  50% {
+    text-shadow: 0 0 35px rgba(6,182,212,0.7), 0 0 70px rgba(59,130,246,0.7);
+  }
+}
+
+.section-subtitle {
+  color: #cbd5e1;
+  font-size: 1.125rem;
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* About Content Layout */
+.about-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  align-items: flex-start;
+  margin-top: 2rem;
+}
+
+/* Profile Wrapper */
+.profile-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2rem;
+  position: relative;
+  perspective: 1000px;
+}
+
+/* Profile Image Styling */
+.profile-image {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid rgba(124,58,237,0.7);
+  box-shadow: 0 0 30px rgba(124,58,237,0.5), 0 0 50px rgba(59,130,246,0.4);
+  position: relative;
+  z-index: 1;
+  transition: transform 0.3s ease-in-out;
+}
+
+.profile-wrapper:hover .profile-image {
+  transform: scale(1.05);
+}
+
+/* Animated Glow Circle Behind Image */
+.profile-circle.animated {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(124,58,237,0.3), rgba(59,130,246,0.15));
+  animation: rotatePulse 10s linear infinite;
+  filter: blur(15px);
+  z-index: -1;
+}
+
+@keyframes rotatePulse {
+  0% { transform: rotate(0deg) scale(1); opacity: 0.4; }
+  50% { transform: rotate(180deg) scale(1.15); opacity: 0.7; }
+  100% { transform: rotate(360deg) scale(1); opacity: 0.4; }
+}
+
+/* About Boxes */
+.about-box {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 2rem;
+  margin: 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 1rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 15px rgba(124,58,237,0.1);
+}
+
+.about-box:hover {
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 25px rgba(59,130,246,0.3);
+}
+
+.about-heading {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #fff;
+  font-weight: 600;
+}
+
+.about-text {
+  color: #ddd;
+  line-height: 1.7;
+}
+
+.about-list {
+  color: #ccc;
+  list-style: none;
+  padding-left: 0;
+  margin-top: 0.5rem;
+}
+
+/* Icons in About Boxes */
+.icon-title {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.icon {
+  color: #7c3aed;
+}
+
+/* Languages Section */
+.language-box-center {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+}
+
+.language-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 1rem;
+  justify-content: center;
+}
+
+.language-tag {
+  background: linear-gradient(to right, #7c3aed33, #3b82f633);
+  padding: 0.75rem 1.5rem;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #f1f1f1;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 0 10px rgba(124,58,237,0.2);
+}
+
+.language-tag .level {
+  margin-left: 0.5rem;
+  color: #cbd5e1;
+  font-size: 0.85rem;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 900px) {
+  .about-content {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .profile-image {
+    width: 150px;
+    height: 150px;
+  }
+
+  .profile-circle.animated {
+    width: 170px;
+    height: 170px;
+  }
+}

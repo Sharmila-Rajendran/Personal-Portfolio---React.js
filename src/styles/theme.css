@@ -1,0 +1,154 @@
+/* === Global Theme Variables === */
+:root {
+  --bg: #f9fafb;
+  --text: #1f2937;
+  --text-muted: #6b7280;
+  --card-bg: #ffffff;
+  --border: rgba(0, 0, 0, 0.05);
+  --accent: #6366f1;
+  --accent-gradient: linear-gradient(to right, #6366f1, #ec4899);
+  --shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  --code-bg: #f3f4f6;
+}
+
+[data-theme="dark"] {
+  --bg: #0f172a;
+  --text: #f3f4f6;
+  --text-muted: #94a3b8;
+  --card-bg: rgba(255, 255, 255, 0.05);
+  --border: rgba(255, 255, 255, 0.1);
+  --accent: #c084fc;
+  --accent-gradient: linear-gradient(to right, #c084fc, #f472b6);
+  --shadow: none;
+  --code-bg: #1e293b;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--bg);
+  color: var(--text);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+section {
+  padding: 5rem 1rem;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+h1, h2, h3 {
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+p {
+  line-height: 1.7;
+}
+
+/* === Header === */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+  backdrop-filter: blur(10px);
+  background-color: transparent;
+  transition: background-color 0.3s ease;
+}
+
+.navbar.scrolled {
+  background-color: rgba(0, 0, 0, 0.6);
+  border-bottom: 1px solid var(--border);
+}
+
+.navbar-brand {
+  font-size: 1.75rem;
+  font-weight: 700;
+  background: var(--accent-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.nav-link {
+  color: var(--text-muted);
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.nav-link:hover {
+  color: var(--text);
+}
+
+/* === Card Base === */
+.card {
+  background-color: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 1rem;
+  padding: 2rem;
+  box-shadow: var(--shadow);
+  transition: transform 0.3s, background 0.3s;
+}
+
+.card:hover {
+  transform: scale(1.02);
+}
+
+/* === Buttons === */
+.btn {
+  padding: 0.75rem 2rem;
+  background: var(--accent-gradient);
+  color: white;
+  font-weight: 500;
+  border-radius: 999px;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.btn:hover {
+  transform: scale(1.05);
+}
+
+/* === Inputs === */
+input,
+textarea {
+  background-color: var(--code-bg);
+  color: var(--text);
+  border: 1px solid var(--border);
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+  width: 100%;
+}
+
+/* === Section Titles === */
+.section-title {
+  font-size: 2.5rem;
+  background: var(--accent-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 1rem;
+}
+
+.section-subtitle {
+  color: var(--text-muted);
+  font-size: 1.125rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* === Responsive === */
+@media (max-width: 768px) {
+  .navbar-menu {
+    display: none;
+  }
+
+  .mobile-menu {
+    display: block;
+    background-color: var(--card-bg);
+    padding: 1rem;
+    border-radius: 1rem;
+  }
+}
